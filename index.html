@@ -1,0 +1,440 @@
+<!doctype html>
+<!-- Основная страница сайта онлайн школы корейского языка -->
+<html class="no-js" lang="ru">
+<head>
+  <!-- Мета-теги: кодировка, адаптивность, заголовок -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Онлайн школа корейского языка</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Онлайн школа для изучения корейского языка">
+  <meta property="og:title" content="Онлайн школа корейского языка">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Лента скидки (карусель): желтая карусель с автоматической сменой слайдов -->
+  <div class="discount-banner">
+    <div class="discount-carousel">
+      <div class="discount-slide active">
+        <span class="discount-text">🎉 Скидка 10% на все курсы! Успей записаться!</span>
+      </div>
+      <div class="discount-slide">
+        <span class="discount-text">📚 Новый набор на курсы корейского языка - начинаем обучение уже на следующей неделе!</span>
+      </div>
+      <div class="discount-slide">
+        <span class="discount-text">⭐ Индивидуальные занятия с носителями языка - запись открыта!</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header с навигацией -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <h1>한국어 학교</h1>
+          <span class="logo-subtitle">Онлайн школа корейского языка</span>
+        </div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-item dropdown">
+              <a href="#courses" class="nav-link" id="courses-link">Курсы <span class="dropdown-arrow">▼</span></a>
+              <ul class="dropdown-menu" id="courses-dropdown">
+                <li><a href="#courses" data-level="1">Курс 1 уровня</a></li>
+                <li><a href="#courses" data-level="2">Курс 2 уровня</a></li>
+                <li><a href="#courses" data-level="3">Курс 3 уровня</a></li>
+                <li><a href="#courses" data-level="4">Курс 4 уровня</a></li>
+                <li><a href="#courses" data-level="individual">Индивидуальные занятия</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a href="#teachers" class="nav-link">Преподаватели</a></li>
+            <li class="nav-item"><a href="#pricing" class="nav-link">Прайс</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">О школе</a></li>
+          </ul>
+        </nav>
+        <!-- Блок авторизации: кнопки входа/регистрации меняются на кнопку профиля после авторизации -->
+        <div class="auth-buttons">
+          <div class="auth-menu" id="auth-menu">
+            <button class="btn btn-primary" id="login-btn">Вход</button>
+            <button class="btn btn-primary" id="register-btn">Регистрация</button>
+          </div>
+          <div class="user-menu hidden" id="user-menu">
+            <a href="profile.html" class="btn btn-primary" id="profile-btn">Профиль</a>
+            <button class="btn btn-secondary" id="logout-btn">Выход</button>
+          </div>
+        </div>
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Главная секция: основной контент страницы с курсами, преподавателями и т.д. -->
+  <main class="main-content">
+    <section class="hero">
+      <div class="container">
+        <h2 class="hero-title">Изучайте корейский язык с нами</h2>
+        <p class="hero-subtitle">Современные методики, опытные преподаватели, удобный формат обучения</p>
+        <a href="#courses" class="btn btn-primary btn-large">Начать обучение</a>
+      </div>
+    </section>
+
+    <!-- Секция курсов -->
+    <section id="courses" class="section courses-section">
+      <div class="container">
+        <h2 class="section-title">Наши курсы</h2>
+        <div class="courses-grid">
+          <div class="course-card" data-level="1">
+            <div class="course-level">Уровень 1</div>
+            <h3 class="course-title">Начальный уровень</h3>
+            <p class="course-description">Изучение базовых правил корейского алфавита (Хангыль), основных фраз и грамматических структур. Идеально для начинающих.</p>
+            <ul class="course-features">
+              <li>Хангыль (алфавит)</li>
+              <li>Базовые слова и фразы</li>
+              <li>Простая грамматика</li>
+              <li>Практика произношения</li>
+            </ul>
+            <button class="btn btn-primary enroll-btn" data-course="Уровень 1">Записаться на курс</button>
+          </div>
+          <div class="course-card" data-level="2">
+            <div class="course-level">Уровень 2</div>
+            <h3 class="course-title">Базовый уровень</h3>
+            <p class="course-description">Развитие навыков общения, изучение более сложной грамматики и расширение словарного запаса до 1000 слов.</p>
+            <ul class="course-features">
+              <li>Повседневные диалоги</li>
+              <li>Средняя грамматика</li>
+              <li>Чтение простых текстов</li>
+              <li>Написание предложений</li>
+            </ul>
+            <a href="#pricing" class="btn btn-primary">Узнать цену</a>
+          </div>
+          <div class="course-card" data-level="3">
+            <div class="course-level">Уровень 3</div>
+            <h3 class="course-title">Средний уровень</h3>
+            <p class="course-description">Углубленное изучение грамматики, работа с более сложными текстами и развитие навыков письма и разговорной речи.</p>
+            <ul class="course-features">
+              <li>Сложная грамматика</li>
+              <li>Чтение статей и новостей</li>
+              <li>Деловая переписка</li>
+              <li>Разговорная практика</li>
+            </ul>
+            <a href="#pricing" class="btn btn-primary">Узнать цену</a>
+          </div>
+          <div class="course-card" data-level="4">
+            <div class="course-level">Уровень 4</div>
+            <h3 class="course-title">Продвинутый уровень</h3>
+            <p class="course-description">Совершенствование всех языковых навыков, работа с литературными текстами и подготовка к профессиональному использованию языка.</p>
+            <ul class="course-features">
+              <li>Продвинутая грамматика</li>
+              <li>Литературные тексты</li>
+              <li>Профессиональный корейский</li>
+              <li>Подготовка к экзаменам TOPIK</li>
+            </ul>
+            <button class="btn btn-primary enroll-btn" data-course="Уровень 1">Записаться на курс</button>
+          </div>
+          <div class="course-card" data-level="2">
+            <div class="course-level">Уровень 2</div>
+            <h3 class="course-title">Базовый уровень</h3>
+            <p class="course-description">Развитие навыков общения, изучение более сложной грамматики и расширение словарного запаса до 1000 слов.</p>
+            <ul class="course-features">
+              <li>Повседневные диалоги</li>
+              <li>Средняя грамматика</li>
+              <li>Чтение простых текстов</li>
+              <li>Написание предложений</li>
+            </ul>
+            <button class="btn btn-primary enroll-btn" data-course="Уровень 2">Записаться на курс</button>
+          </div>
+          <div class="course-card" data-level="3">
+            <div class="course-level">Уровень 3</div>
+            <h3 class="course-title">Средний уровень</h3>
+            <p class="course-description">Углубленное изучение грамматики, работа с более сложными текстами и развитие навыков письма и разговорной речи.</p>
+            <ul class="course-features">
+              <li>Сложная грамматика</li>
+              <li>Чтение статей и новостей</li>
+              <li>Деловая переписка</li>
+              <li>Разговорная практика</li>
+            </ul>
+            <button class="btn btn-primary enroll-btn" data-course="Уровень 3">Записаться на курс</button>
+          </div>
+          <div class="course-card" data-level="4">
+            <div class="course-level">Уровень 4</div>
+            <h3 class="course-title">Продвинутый уровень</h3>
+            <p class="course-description">Совершенствование всех языковых навыков, работа с литературными текстами и подготовка к профессиональному использованию языка.</p>
+            <ul class="course-features">
+              <li>Продвинутая грамматика</li>
+              <li>Литературные тексты</li>
+              <li>Профессиональный корейский</li>
+              <li>Подготовка к экзаменам TOPIK</li>
+            </ul>
+            <button class="btn btn-primary enroll-btn" data-course="Уровень 4">Записаться на курс</button>
+          </div>
+          <div class="course-card" data-level="individual">
+            <div class="course-level individual">Индивидуальные занятия</div>
+            <h3 class="course-title">Персональное обучение</h3>
+            <p class="course-description">Индивидуальные занятия с носителями языка, индивидуальный подход и гибкий график. Идеально для быстрого прогресса и специфических целей.</p>
+            <ul class="course-features">
+              <li>Персональный преподаватель</li>
+              <li>Индивидуальная программа</li>
+              <li>Гибкий график занятий</li>
+              <li>Максимальная практика</li>
+              <li>Быстрый прогресс</li>
+            </ul>
+            <button class="btn btn-primary enroll-btn" data-course="Индивидуальные занятия">Записаться на курс</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция преподавателей -->
+    <section id="teachers" class="section teachers-section">
+      <div class="container">
+        <h2 class="section-title">Наши преподаватели</h2>
+        <div class="teachers-grid">
+          <div class="teacher-card">
+            <!-- МЕСТО ДЛЯ ФОТО ПРЕПОДАВАТЕЛЯ -->
+            <div class="teacher-photo">
+              <div class="photo-placeholder">
+                <span>📷 Фото преподавателя</span>
+                <small>Вставьте фото здесь</small>
+              </div>
+            </div>
+            <h3 class="teacher-name">Ким Со Ён</h3>
+            <p class="teacher-description">Опытный преподаватель корейского языка с 10-летним стажем. Специализируется на начальных уровнях и фонетике. Носитель языка, магистр педагогических наук.</p>
+          </div>
+          <div class="teacher-card">
+            <!-- МЕСТО ДЛЯ ФОТО ПРЕПОДАВАТЕЛЯ -->
+            <div class="teacher-photo">
+              <div class="photo-placeholder">
+                <span>📷 Фото преподавателя</span>
+                <small>Вставьте фото здесь</small>
+              </div>
+            </div>
+            <h3 class="teacher-name">Пак Мин Хо</h3>
+            <p class="teacher-description">Преподаватель среднего и продвинутого уровня. Эксперт по корейской культуре и литературе. Подготовил более 500 студентов к экзамену TOPIK.</p>
+          </div>
+          <div class="teacher-card">
+            <!-- МЕСТО ДЛЯ ФОТО ПРЕПОДАВАТЕЛЯ -->
+            <div class="teacher-photo">
+              <div class="photo-placeholder">
+                <span>📷 Фото преподавателя</span>
+                <small>Вставьте фото здесь</small>
+              </div>
+            </div>
+            <h3 class="teacher-name">Ли Чжун Хи</h3>
+            <p class="teacher-description">Молодой и энергичный преподаватель, специализирующийся на разговорной практике и современном корейском языке. Использует интерактивные методы обучения.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция прайса -->
+    <section id="pricing" class="section pricing-section">
+      <div class="container">
+        <h2 class="section-title">Прайс на курсы</h2>
+        <div class="pricing-card">
+          <div class="pricing-info">
+            <h3>Стоимость обучения</h3>
+            <p class="pricing-description">Единая цена для всех курсов независимо от уровня</p>
+            <div class="price">
+              <span class="price-amount">150,000</span>
+              <span class="price-currency">₩ KRW</span>
+            </div>
+            <p class="price-period">в месяц</p>
+            <ul class="pricing-features">
+              <li>✓ Групповые занятия</li>
+              <li>✓ Индивидуальные консультации</li>
+              <li>✓ Доступ к учебным материалам</li>
+              <li>✓ Домашние задания и проверка</li>
+              <li>✓ Сертификат по окончании</li>
+            </ul>
+            <button class="btn btn-primary btn-large enroll-btn" data-course="Групповые курсы">Записаться на курс</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Секция о школе -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <h2 class="section-title">О школе</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>Добро пожаловать в нашу онлайн школу корейского языка! Мы предлагаем качественное образование для всех, кто хочет изучать корейский язык, независимо от возраста и уровня подготовки.</p>
+            <p>Наша школа была основана в 2020 году с целью сделать изучение корейского языка доступным и интересным. Мы используем современные методики обучения, сочетая традиционные подходы с инновационными технологиями.</p>
+            <h3>Наши преимущества:</h3>
+            <ul class="about-features">
+              <li>Опытные преподаватели - носители языка и сертифицированные специалисты</li>
+              <li>Гибкий график - учитесь в удобное для вас время</li>
+              <li>Интерактивные занятия - живое общение и практика</li>
+              <li>Поддержка 24/7 - мы всегда готовы помочь</li>
+              <li>Современная платформа - удобный интерфейс и технологии</li>
+            </ul>
+            <p>Присоединяйтесь к нашему сообществу и начните изучать корейский язык уже сегодня!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer: подвал сайта со ссылками на социальные сети -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>한국어 학교</h3>
+          <p>Онлайн школа корейского языка</p>
+        </div>
+        <!-- Ссылки на социальные сети: Facebook ведет на 404 страницу -->
+        <div class="footer-social">
+          <a href="404.html" class="social-link facebook">
+            Facebook
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link instagram">
+            Instagram
+          </a>
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link github">
+            GitHub
+          </a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2024 Онлайн школа корейского языка. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Модальные окна: все всплывающие окна сайта -->
+  <!-- Форма входа: модальное окно для авторизации пользователя -->
+  <div class="modal" id="login-modal">
+    <div class="modal-content">
+      <span class="modal-close" id="login-close">&times;</span>
+      <h2>Вход в личный кабинет</h2>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="login-username">Логин:</label>
+          <input type="text" id="login-username" required>
+        </div>
+        <div class="form-group">
+          <label for="login-password">Пароль:</label>
+          <input type="password" id="login-password" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Войти</button>
+      </form>
+      <p class="form-hint">Тестовые пользователи: admin/admin, user/user</p>
+    </div>
+  </div>
+
+  <!-- Форма регистрации: модальное окно для регистрации нового пользователя -->
+  <div class="modal" id="register-modal">
+    <div class="modal-content">
+      <span class="modal-close" id="register-close">&times;</span>
+      <h2>Регистрация</h2>
+      <form id="register-form">
+        <div class="form-group">
+          <label for="register-username">Логин:</label>
+          <input type="text" id="register-username" required>
+        </div>
+        <div class="form-group">
+          <label for="register-email">Email:</label>
+          <input type="email" id="register-email" required>
+        </div>
+        <div class="form-group">
+          <label for="register-password">Пароль:</label>
+          <input type="password" id="register-password" required>
+        </div>
+        <div class="form-group">
+          <label for="register-name">Имя:</label>
+          <input type="text" id="register-name" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Зарегистрироваться</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Форма записи на курс: модальное окно для записи на курс -->
+  <div class="modal" id="enroll-modal">
+    <div class="modal-content">
+      <span class="modal-close" id="enroll-close">&times;</span>
+      <h2>Записаться на курс</h2>
+      <form id="enroll-form">
+        <input type="hidden" id="enroll-course-name">
+        <div class="form-group">
+          <label for="enroll-firstname">Имя:</label>
+          <input type="text" id="enroll-firstname" required>
+        </div>
+        <div class="form-group">
+          <label for="enroll-lastname">Фамилия:</label>
+          <input type="text" id="enroll-lastname" required>
+        </div>
+        <div class="form-group">
+          <label for="enroll-email">Электронная почта:</label>
+          <input type="email" id="enroll-email" required>
+        </div>
+        <div class="form-group">
+          <label for="enroll-phone">Номер телефона:</label>
+          <input type="tel" id="enroll-phone" required>
+          <small class="form-hint">Поддерживаются форматы: +7 (Россия) и +82 (Южная Корея)</small>
+        </div>
+        <div class="form-group">
+          <label for="enroll-course-select">Выбранный курс:</label>
+          <select id="enroll-course-select" required>
+            <option value="">Выберите курс</option>
+            <option value="Уровень 1">Уровень 1 - Начальный уровень</option>
+            <option value="Уровень 2">Уровень 2 - Базовый уровень</option>
+            <option value="Уровень 3">Уровень 3 - Средний уровень</option>
+            <option value="Уровень 4">Уровень 4 - Продвинутый уровень</option>
+            <option value="Индивидуальные занятия">Индивидуальные занятия</option>
+          </select>
+          <input type="hidden" id="enroll-course" readonly>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Отправить заявку</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Модальное окно благодарности: показывается после успешной записи на курс -->
+  <div class="modal" id="thank-you-modal">
+    <div class="modal-content">
+      <span class="modal-close" id="thank-you-close">&times;</span>
+      <div class="thank-you-content">
+        <h2>Спасибо, <span id="thank-you-name"></span>! 🎉</h2>
+        <p class="thank-you-message">
+          Спасибо, что записались на курс! <span class="emoji">✨</span><br>
+          Наш менеджер скоро с вами свяжется <span class="emoji">📞</span><br>
+          До встречи на занятиях! <span class="emoji">👋</span>
+        </p>
+        <button class="btn btn-primary btn-large" id="thank-you-ok">Понятно</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Чат поддержки (окно внизу справа): сворачиваемый виджет чата поддержки с индивидуальными чатами для каждого пользователя -->
+  <div class="support-chat-widget" id="support-chat-widget">
+    <div class="chat-header" id="chat-header">
+      <span>Чат поддержки</span>
+      <button class="chat-toggle" id="chat-toggle">−</button>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="chat-messages" id="chat-messages">
+        <div class="chat-message bot">
+          <p>Добро пожаловать! Задайте ваш вопрос, и мы обязательно ответим.</p>
+        </div>
+      </div>
+      <div class="chat-input-container">
+        <input type="text" id="chat-input" placeholder="Введите ваш вопрос..." />
+        <button id="chat-send" class="btn btn-primary">Отправить</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
